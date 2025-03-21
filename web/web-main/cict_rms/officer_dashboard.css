@@ -1,0 +1,153 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url(pexels-steve-29081559.jpg) ;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    margin: 0;
+    padding: 0;
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Adjust darkness: 0.1 is light, 0.6 is darker */
+    z-index: -1;
+}
+
+
+.container {
+    max-width: 90%;
+    color: aliceblue;
+    margin: 50px auto;
+    padding: 10px;
+    background: #2C2C2C;
+    opacity: 0.85;
+    box-shadow: 0 0 15px  #6A11CB; /* Purple glow */
+    border: 2px solid  #6A11CB;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease-in-out;
+    backdrop-filter: blur(50px);
+}
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+
+}
+
+
+.tablink {
+    background-color: darkslategray;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px 5px 0 0;
+    margin-right: 5px;
+    transition: background-color 0.3s;
+}
+
+
+.tablink:hover {
+    background-color: darkcyan;
+}
+.tablink.active {
+    background-color:darkcyan !important;
+}
+
+.tabcontent {/* 2nd container */
+    display: none;
+    padding: 20px;
+    border: 1px solid #6A11CB;
+    border-radius: 5px 5px 5px 5px;
+    background-color: #2C2C2C;
+    
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: nowrap; /* Prevents content from wrapping */
+    max-width: 100%;
+}
+
+
+.tabcontent.active {
+    display: block;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: rgb(255, 255, 255) !important; /* Enforce the background */
+    color: white !important; /* Ensure text is white */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table, th, td {
+    border: 1px solid rgb(255, 255, 255) !important; /*  border */
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: darkslategray !important; /* Darker header */
+    color: white !important;
+}
+
+td {
+    background-color: rgb(208, 0, 255) !important; /*  background for table cells */
+}
+
+
+.form-container {
+    margin-bottom: 20px;
+}
+
+
+.form-container input, .form-container select {
+    margin: 5px;
+    padding: 8px;
+    width: 200px;
+}
+
+
+.form-container button {
+    padding: 8px 16px;
+    background-color: darkslategray;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+.form-container button:hover {
+    background-color: darkcyan;
+}
+
+
+.logout {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+
+.logout a {
+    color:aliceblue;
+    text-decoration: none;
+}
+
+
+.logout a:hover {
+    text-decoration: underline;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
